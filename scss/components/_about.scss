@@ -1,0 +1,58 @@
+@import"verible";
+
+.about {
+    flex: 1.6;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px $margin-right 20px $margin-left;
+    flex-wrap: wrap;
+
+    @include responsiveSize(small) {
+        gap: 20px;
+    }
+}
+
+@mixin card-about {
+    background: white;
+    width: 27%;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    border-radius: $border-radius;
+    @include box-shadow;
+
+    @include responsiveSize(small) {
+        @include flexBasis(100%);
+
+    }
+
+    @include responsiveSize(medium) {
+        @include flexBasis(100%);
+
+    }
+}
+
+.card-about {
+    @include card-about;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .logo-top {
+        display: flex;
+        gap: 10px;
+
+        .partner-logo {
+            flex: 1;
+
+            img {
+                border-radius: $border-radius;
+            }
+        }
+    }
+
+    .logo-bottom {
+        @extend .logo-top;
+    }
+
+}

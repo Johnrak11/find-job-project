@@ -1,0 +1,196 @@
+@import"verible";
+@import"mixin";
+@import"input";
+@import"button";
+.form-apply{
+    background:$body_background;
+    @include flexSize(3);
+    @include flexProp(flex,column);
+    @include flex-center(center,center);
+    padding: 40px;
+    @include box-shadow;
+    @include responsiveSize(medium) {
+        padding:10px;
+        padding-top:5px;
+    }
+    @include responsiveSize(small) {
+        padding:10px;
+    }
+    form{
+        @include responsiveSize(big) {
+            width: auto;
+            height: auto;
+        }
+        @include responsiveSize(medium) {
+            width: auto;
+            height: auto;
+        }
+        @include responsiveSize(small) {
+            width: auto;
+            height: auto;
+            .name{
+                display: flex;
+            }
+        }
+        
+        background:$fomr_color;
+        height: 100%;
+        width: 60%;
+        padding: 30px;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+        .group-profile{
+            display: flex;
+            .profile{
+                padding:12px;
+                background: rgb(143, 143, 160);
+                border-radius: $border-radius;
+                margin-bottom: 10px;
+               .material-icons{
+                    font-size:100px;
+                    color: white;
+               }
+            }
+            .cv{
+                display: flex;
+                @include flex-center(center,center );
+                width: 100%;
+                h2{
+                    color:blue;
+                }
+            }
+            @include responsiveSize(big) {
+                .profile{
+                    .material-icons{
+                        font-size:auto;
+                        color: white;
+                   }
+                }
+            }
+            @include responsiveSize(medium) {
+                .profile{
+                    .material-icons{
+                        font-size:100px;
+                        color: white;
+                   }
+                }
+            }
+            @include responsiveSize(medium) {
+                button{
+                    width:auto;
+                }
+            }
+            @include responsiveSize(small) {
+                button{
+                    width:20px;
+                }
+                h2{
+                    font-size:15px;
+                }
+                .profile{
+                    .material-icons{
+                        font-size:80px;
+                        color: white;
+                   }
+                }
+            }
+            
+        }
+        .profile-tile{ 
+                margin-bottom: 20px;
+                button{
+                    width:18%;
+                }
+                @include responsiveSize(big) {
+                    button{
+                        width:auto;
+                    }
+                }
+                @include responsiveSize(medium) {
+                    button{
+                        width:auto;
+                    }
+                }
+                @include responsiveSize(small) {
+                    button{
+                        width: auto;
+                    }
+                }
+        }
+        .gruop-name{
+            @include flexProp(flex,row);
+            .full-name{
+                width: 30%;
+                margin-top: 30px;
+            }
+            @include responsiveSize(big) {
+                .full-name{
+                    margin-right:15px;
+                }
+            }
+            @include responsiveSize(small) {
+                width: auto;
+                height: auto;
+                .name{
+                    @include flexProp(flex,column);
+                    width: 100%;
+                }
+                .full-name{
+                    display: none;
+                }
+            }
+        }
+        .name{
+            @include flexProp(flex,row);
+            gap: 25px;
+            input{
+                width: 100%;
+            }
+        }
+        input{
+            @include input;
+        }
+        button{
+            width: 100%;
+            margin: auto;
+            @include button;
+            background:$btn_main;
+            color: white;
+        }
+    }
+    .current-address{
+        display: flex;
+        .current-input{
+            width: 100%;
+        }
+        .current{
+            width: 37%;
+            margin-top:30px;
+        }
+        @include responsiveSize(small) {
+            .current{
+                display: none;
+            }
+        }
+        
+    }
+    .email{
+        display:flex;
+        .title-email{
+            width: 37%;
+            margin-top:30px;
+        }
+        .input-email{
+            width:100%;
+        }
+        @include responsiveSize(small) {
+            .title-email{
+                 display: none;
+            }
+        }
+    }
+    .phone{
+        display: flex;
+        @extend .email;
+    }
+}

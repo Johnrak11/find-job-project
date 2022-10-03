@@ -1,0 +1,136 @@
+@import"verible";
+@import"mixin";
+.main-position {
+    flex: 4;
+    flex-direction: column;
+    display: flex;
+    padding:10px $margin-right 10px $margin-left;
+    gap: 20px;
+    @include responsiveSize(small) {
+        flex: 0.5;
+        gap: 30px;
+    }
+    .card-position {
+        display: flex;
+        @include flexSize(1);
+        border-radius: $border-radius;
+        background:rgb(252, 252, 252);
+        @include box-shadow;
+        @include responsiveSize(small) {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            grid-template-areas:
+            "row1 row2"
+            "row3 row4";
+        }
+        .position {
+            @include flexSize(1);
+            padding: 15px 15px 15px 10px;
+            @include responsiveSize(small){
+                grid-area: row3;
+            }
+            button{
+                @include button;
+                background-color: rgb(236, 236, 236);
+                padding: 7px;
+                margin: 1.5px;
+            }
+            button:hover{
+                background-color: $btn_main;
+                color: whitesmoke;
+            }
+            .fa-graduation-cap{
+                margin: 10px 0px 10px 0px;
+            }
+            h3:nth-of-type(1){
+                font-size: 18px;
+                color: $font-title-c;
+            }
+            h3:nth-of-type(2){
+                color: $btn_main;
+                font-size: 20px;
+            }
+
+        }
+        .apply-now {
+            flex: 0.5;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            @include responsiveSize(small) {
+                grid-area: row4;
+            }
+            button {
+                margin: 15px;
+                @include button;
+                background: $btn_main;
+                color: $font-color-w;
+                padding-left: 20px;
+                padding-right: 20px;
+                @include responsiveSize(big) {
+                    margin: 0 8px 15px 0;
+                }
+            }
+            
+        }
+
+        .company-name {
+
+            @include flexSize(1);
+            padding: 15px 15px 15px 10px;
+            @include responsiveSize(big) {
+                flex: 0.7;
+            }
+            @include responsiveSize(small) {
+                grid-area: row1;
+            }
+            h3{
+                font-size: 18px;
+                color: $font-title-c;
+            }
+            .location{
+                @include flexProp(flex,row);
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        .company-logo1 {
+            @include comapny-logo (0.5);
+            @include responsiveSize(small) {
+                grid-area: row2 ;
+                align-items: flex-start;
+            }
+            img{
+                margin: 15px 0 15px 0;
+                width: 145px;
+                border-radius: $border-radius;
+                @include responsiveSize(big) {
+                    width: 87%;
+                }
+                @include responsiveSize(small) {
+                    width: 85%;
+                    margin-top:10px ;
+                }
+            }
+        }
+        button:hover {
+            @include hover-zoom;
+        }
+
+    }
+    
+    .more-position{
+        @include more-position;
+        @include responsiveSize(small) {
+            width: auto;
+        }
+        button:hover {
+            @include hover-zoom;
+        }
+    }
+
+}
+img:hover{
+    @include hover-zoom;
+}

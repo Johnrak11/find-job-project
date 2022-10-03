@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  font-family: sans-serif;
+  background-color: #d9e0ed;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.form-container form {
+  border-radius: 12px;
+  width: 35%;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  padding: 35px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media (max-width: 900px) {
+  .form-container form {
+    height: auto;
+    width: 60%;
+  }
+}
+@media (max-width: 760px) {
+  .form-container form {
+    height: auto;
+    width: 90%;
+  }
+}
+@media (max-width: 670px) {
+  .form-container form {
+    height: auto;
+    width: 90%;
+  }
+  .form-container form button {
+    padding: 5px;
+  }
+}
+@media (max-width: 400px) {
+  .form-container form {
+    height: auto;
+    width: 90%;
+  }
+  .form-container form button {
+    padding: 5px;
+  }
+}
+.form-container form h2 {
+  margin-bottom: 25px;
+  color: blue;
+}
+.form-container form .name {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+@media (max-width: 670px) {
+  .form-container form .name {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.form-container form .name .first-name label {
+  margin-bottom: 10px;
+}
+.form-container form .email, .form-container form .password {
+  display: flex;
+  flex-direction: column;
+}
+.form-container form .email label, .form-container form .password label {
+  margin-bottom: 10px;
+}
+.form-container form .password .forgot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form-container form .password .forgot .remenber {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+}
+.form-container form .password .forgot .remenber .checkbox {
+  background-color: red;
+  padding: 10px;
+  color: red;
+  align-self: flex-start;
+  margin: 0;
+  width: 10%;
+  height: 85%;
+}
+.form-container form .password .forgot a {
+  text-decoration: none;
+  font-size: 15px;
+}
+.form-container form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: solid 1px black;
+  outline: none;
+  margin-bottom: 20px;
+}
+.form-container form .btn {
+  text-align: center;
+}
+.form-container form .btn button {
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  color: rgb(24, 24, 24);
+  width: 100%;
+  background: rgb(32, 122, 254);
+  margin-top: 20px;
+}
+.form-container form .btn button a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.form-container form .btn button a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.form-container form .btn button:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.form-container .icon {
+  text-align: center;
+  margin-top: 20px;
+}
+.form-container .icon a {
+  margin-left: 10px;
+}
+.form-container .icon .fa {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.form-container .icon .fa-facebook, .form-container .icon .fa-linkedin, .form-container .icon .fa-google, .form-container .icon .fa-twitter {
+  font-size: 30px;
+  text-decoration: none;
+  color: #4267B2;
+}
+.form-container .icon .fa-twitter {
+  color: #1DA1F2;
+}
+.form-container .icon .fa-google {
+  color: red;
+}/*# sourceMappingURL=sign-up.css.map */

@@ -1,0 +1,26 @@
+@import'components/verible';
+@import'components/mixin';
+*{
+    @include spacing(0,0);
+}
+body{
+    @include body(250vh);
+    @include responsiveSize(big) {
+        height: 150vh;
+    }
+}
+@import'components/nav';
+@import'components/banner';
+.banner {
+    background:url(../image/girl-banner-4.png) center no-repeat; 
+    background-size: cover;
+    @include responsiveSize(big) {
+        flex:1.4;
+    }
+    @include responsiveSize(small) {
+        background:none; 
+    }
+}
+@import"components/soures-menu";
+@import"components/video-container";
+@import"components/footer"

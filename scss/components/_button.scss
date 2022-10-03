@@ -1,0 +1,16 @@
+@import'verible';
+
+@mixin button {
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    background: $btn_secondary;
+    border-radius: $border-radius;
+    color: $font-color-b;
+    @content;
+
+    a {
+        color: $font-color-w;
+        text-decoration: none;
+    }
+}

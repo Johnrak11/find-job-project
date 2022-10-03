@@ -1,0 +1,21 @@
+@import'components/verible';
+@import'components/mixin';
+*{
+    @include spacing(0,0);
+}
+body{
+    @include body(290vh);
+
+}
+@import'components/nav';
+@import'components/banner';
+.banner{
+    @include flexSize(2);
+}
+@import'components/select';
+@import'components/position';
+@import'components/input-search';
+@import'components/popular';
+@import'components/footer';
+
+

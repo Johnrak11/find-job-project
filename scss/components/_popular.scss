@@ -1,0 +1,35 @@
+@import'verible';
+@import'mixin';
+.popular{
+    @include flexProp(flex,row){
+        align-items: center;
+        gap: 20px
+    }
+    @include spacing(10px,10px $margin-right 0 $margin-left);
+    @include responsiveSize(small) {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+        margin-bottom : 20px;
+    }
+    h4{
+        font-size: $font-size-big;
+        color: rgb(42, 42, 42);
+        
+    }
+    span{
+        font-size: $font-size-meduim;
+        @include button;
+        @include spacing (9px,0);
+        text-align: center;
+        @include box-shadow;
+        @include responsiveSize(small) {
+            padding: 5px;
+        }
+    }
+    span:hover{
+        background-color: $btn_main;
+        cursor: pointer;
+        color: white;
+    }
+}

@@ -1,0 +1,109 @@
+@import"verible";
+@import"mixin";
+
+// @import"";
+.contact-container {
+    @include flexProp(flex, column);
+    @include flexSize(4);
+    padding: 40px $margin-right 50px $margin-left;
+
+    .title {
+        margin-bottom: 10px;
+
+        @include responsiveSize(small) {
+            h1 {
+                font-size: $font-size-meduim;
+            }
+        }
+    }
+
+    .contact-card {
+        @include responsiveSize(small) {
+            @include flexProp(flex, column);
+        }
+
+        @include responsiveSize(small) {
+            padding: 20px;
+        }
+
+        @include flexProp(flex, row);
+        @include flexSize(1);
+        background-color: white;
+        border-radius: $border-radius;
+        margin-bottom: 20px;
+        @include box-shadow;
+
+        .phone-number {
+            @include flexSize(1);
+            font-size: 30px;
+            @include flexProp(flex, row);
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            @include responsiveSize(small) {
+                p {
+                    font-size: $font-size-small;
+                }
+            }
+
+            .fa-phone,
+            .fa-telegram {
+                text-decoration: none;
+                color: #229ED9;
+                margin-top: 10px;
+
+            }
+
+            @include responsiveSize(small) {
+
+                .fa-phone,
+                .fa-telegram {
+                    font-size: 25px;
+                }
+            }
+
+            .number {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+        }
+
+        .gmail {
+            @extend .phone-number;
+            margin-bottom: 10px;
+
+            .material-icons {
+                font-size: 40px;
+                color: red;
+                margin-top: 10px;
+            }
+
+            @include responsiveSize(small) {
+                .material-icons {
+                    font-size: 28px;
+
+                }
+            }
+        }
+
+        @include responsiveSize(small) {
+            .gmail {
+                margin-right: 20px;
+            }
+        }
+
+        .telegram {
+            @extend .phone-number;
+        }
+
+    }
+
+    .map {
+        @include flexSize(2);
+        margin-top: 20px;
+        border: solid 10px white;
+        border-radius: $border-radius;
+        @include box-shadow;
+    }
+
+}

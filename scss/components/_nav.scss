@@ -1,0 +1,191 @@
+@import'button';
+@import'verible';
+@import'mixin';
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 5% 5px 5%;
+    justify-content: space-between;
+    box-shadow: 2px 4px 6px 1px #aaa;
+    z-index: 1;
+    @include responsiveSize(big) {
+        padding: 10px;
+        gap: 0;
+    }
+    .logo {
+        flex: 1;
+        @include responsiveSize(big) {
+            margin-left: 4%;
+            margin-right: 20px;
+            flex:0.5;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+    #click {
+        display: none;
+    }
+
+    .fa-bars {
+        color: #170263;
+        font-size: 2rem;
+        cursor: pointer;
+        display: none;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        flex: 4;
+        justify-content: center;
+        padding: 10px;
+        justify-content: space-evenly;
+        margin-right: 70px;
+        @include responsiveSize(big) {
+            margin-right: 0px;
+            justify-content: space-between;
+            
+        }
+        .form {
+            display: none;
+            @include button;
+        }
+
+        li {
+            margin: 0 .7px;
+
+            a {
+                color: #170263;
+                letter-spacing: 2px;
+                font-size: 1.2rem;
+                transition: .5s ease-in-out;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-decoration: none;
+                @include responsiveSize(big) {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        li:hover::after {
+            width: 100%;
+        }
+        // -------hover-zom------
+        li:hover,
+        .contain-fluid .row .text-center h2:hover {
+            transform: scale(1.1);
+            transition: .5s;
+        }
+        // ---------cleck-------
+        li a:hover,
+        #active,
+        .contain-fluid .row .text-center h2:hover {
+            color: $hover ;
+        }
+
+    }
+
+    .nav-right {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        flex: 1;
+        @include responsiveSize(big) {
+            margin-right: 4%;
+            flex: 1.5;
+        }
+        button {
+            @include button;
+            width: 40%;
+            @include responsiveSize(big) {
+                width: auto;
+                padding: 11px;
+                // margin-left: $margin-left;
+
+            }
+        }
+
+        .login {
+            background-color: $btn_main;
+
+            a {
+                text-decoration: none;
+                color: $font-color-w;
+            }
+        }
+
+        .sign {
+            background-color: rgb(222, 222, 222);
+            a {
+                text-decoration: none;
+                color: $font-color-b;
+            }
+        }
+
+    }
+}
+// ------------phone-----------
+@include responsiveSize(small) {
+    nav {
+        // ------យកulទៅលាក់សិន----
+        ul {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            width: 100%;
+            display: block;
+            height: auto;
+            background: #2b4857e3;
+            text-align: left;
+            transition: all 0.9s ease;
+            padding: 0;
+            li {
+                margin: 0.8rem 2rem;
+                a {
+                    display: block;
+                    padding: 8px 0px;
+                    color: #ffff;
+                }
+            }
+            li:hover {
+                transform: none;
+            }
+            li:hover::after {
+                width: 0;
+            }
+            .form {
+                display: flex;
+                // @include button;
+            }
+        }
+        .logo {
+            img {
+            width: 40px;
+            }
+        }
+        // --------if clock give ul left to 0%------- 
+        #click:checked~ul {
+            left: 0%;
+        }
+        #click:checked~.menu-bars i::before {
+            // -----icon x -----
+            content: "\f00d";
+        }
+        .nav-right {
+            display: none;
+        }
+        .menu-bars{
+            .fa-bars {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,248 @@
+.form-apply {
+  background: #d9e0ed;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media (max-width: 760px) {
+  .form-apply {
+    padding: 10px;
+    padding-top: 5px;
+  }
+}
+@media (max-width: 670px) {
+  .form-apply {
+    padding: 10px;
+  }
+}
+.form-apply form {
+  background: white;
+  height: 100%;
+  width: 60%;
+  padding: 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .form-apply form {
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 760px) {
+  .form-apply form {
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 670px) {
+  .form-apply form {
+    width: auto;
+    height: auto;
+  }
+  .form-apply form .name {
+    display: flex;
+  }
+}
+.form-apply form .group-profile {
+  display: flex;
+}
+.form-apply form .group-profile .profile {
+  padding: 12px;
+  background: rgb(143, 143, 160);
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.form-apply form .group-profile .profile .material-icons {
+  font-size: 100px;
+  color: white;
+}
+.form-apply form .group-profile .cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.form-apply form .group-profile .cv h2 {
+  color: blue;
+}
+@media (max-width: 900px) {
+  .form-apply form .group-profile .profile .material-icons {
+    font-size: auto;
+    color: white;
+  }
+}
+@media (max-width: 760px) {
+  .form-apply form .group-profile .profile .material-icons {
+    font-size: 100px;
+    color: white;
+  }
+}
+@media (max-width: 760px) {
+  .form-apply form .group-profile button {
+    width: auto;
+  }
+}
+@media (max-width: 670px) {
+  .form-apply form .group-profile button {
+    width: 20px;
+  }
+  .form-apply form .group-profile h2 {
+    font-size: 15px;
+  }
+  .form-apply form .group-profile .profile .material-icons {
+    font-size: 80px;
+    color: white;
+  }
+}
+.form-apply form .profile-tile {
+  margin-bottom: 20px;
+}
+.form-apply form .profile-tile button {
+  width: 18%;
+}
+@media (max-width: 900px) {
+  .form-apply form .profile-tile button {
+    width: auto;
+  }
+}
+@media (max-width: 760px) {
+  .form-apply form .profile-tile button {
+    width: auto;
+  }
+}
+@media (max-width: 670px) {
+  .form-apply form .profile-tile button {
+    width: auto;
+  }
+}
+.form-apply form .gruop-name {
+  display: flex;
+  flex-direction: row;
+}
+.form-apply form .gruop-name .full-name {
+  width: 30%;
+  margin-top: 30px;
+}
+@media (max-width: 900px) {
+  .form-apply form .gruop-name .full-name {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 670px) {
+  .form-apply form .gruop-name {
+    width: auto;
+    height: auto;
+  }
+  .form-apply form .gruop-name .name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .form-apply form .gruop-name .full-name {
+    display: none;
+  }
+}
+.form-apply form .name {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.form-apply form .name input {
+  width: 100%;
+}
+.form-apply form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: solid 1px black;
+  outline: none;
+  margin-bottom: 20px;
+}
+.form-apply form button {
+  width: 100%;
+  margin: auto;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  color: rgb(24, 24, 24);
+  background: rgb(32, 122, 254);
+  color: white;
+}
+.form-apply form button a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.form-apply .current-address {
+  display: flex;
+}
+.form-apply .current-address .current-input {
+  width: 100%;
+}
+.form-apply .current-address .current {
+  width: 37%;
+  margin-top: 30px;
+}
+@media (max-width: 670px) {
+  .form-apply .current-address .current {
+    display: none;
+  }
+}
+.form-apply .email, .form-apply .phone {
+  display: flex;
+}
+.form-apply .email .title-email, .form-apply .phone .title-email {
+  width: 37%;
+  margin-top: 30px;
+}
+.form-apply .email .input-email, .form-apply .phone .input-email {
+  width: 100%;
+}
+@media (max-width: 670px) {
+  .form-apply .email .title-email, .form-apply .phone .title-email {
+    display: none;
+  }
+}
+.form-apply .phone {
+  display: flex;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9e0ed;
+}
+@media (max-width: 900px) {
+  body {
+    height: 170vh;
+  }
+}
+@media (max-width: 900px) {
+  body {
+    height: 100vh;
+  }
+}
+@media (max-width: 760px) {
+  body {
+    height: 100vh;
+  }
+}
+@media (max-width: 670px) {
+  body {
+    height: 100vh;
+  }
+}/*# sourceMappingURL=apply.css.map */

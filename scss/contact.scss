@@ -1,0 +1,17 @@
+@import'components/verible';
+@import'components/mixin';
+*{
+    @include spacing(0,0);
+}
+body{
+    @include body(160vh);
+    @include responsiveSize(big) {
+        height: 120vh;
+    }
+}
+@import'components/nav';
+@import'components/contact';
+@import'components/footer';
+.title {
+    @include title;
+}

@@ -1,0 +1,29 @@
+@import'mixin';
+@import 'verible';
+@import 'button';
+.select{
+    @include flexProp(flex,row){
+        align-items: center;
+        gap: 15px;
+        @include flexSize(0.5);
+        @include spacing(0, 0 $margin-right 0 $margin-left);
+        
+    }
+    @include responsiveSize(small) {
+        margin-bottom: 10px;
+    }
+    select{
+        @include select(10px,15%);
+        @include responsiveSize(small) {
+            flex: 1;
+            padding: 5px;
+        }
+        @include box-shadow;
+        option{
+            font-size:$font-select-b;
+            @include responsiveSize(big) {
+                font-size:$font-select-m;
+            }
+        }
+    }
+}

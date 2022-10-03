@@ -1,0 +1,19 @@
+@import'mixin';
+
+.banner {
+
+    @include flexProp(flex, column) {
+        @include flexSize(3);
+        justify-content: center;
+    }
+
+    background:url(../../image/diverse-businesspeople-having-meeting.jpg) center no-repeat;
+    background-size: cover;
+
+    // --------responsive-------
+    @include responsiveSize(small) {
+        background: none;
+        flex: 1;
+        margin-top: 10px;
+    }
+}

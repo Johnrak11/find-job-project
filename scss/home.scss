@@ -1,0 +1,36 @@
+@import'components/verible';
+@import'components/mixin';
+
+* {
+    @include spacing(0, 0);
+}
+body {
+    @include body(300vh);
+    // --------responsive-------
+    @include responsiveSize(big) {
+        height: 170vh;
+    }
+    @include responsiveSize(small) {
+        // height:100vh;
+    }
+}
+@import'components/nav';
+@import'components/banner';
+
+.banner {
+    align-items: center;
+    background:url(../image/Flat_openSpace_offices_15.jpg) center no-repeat; 
+    background-size: cover;
+    @include responsiveSize(small) {
+        background:none; 
+        margin-top: 10px; 
+    }
+}
+@import'components/input-search';
+.title {
+    @include spacing(5px, 25px 10px 10px $margin-left);
+    @include title;
+}
+@import"components/position";
+@import"components/about";
+@import"components/footer";

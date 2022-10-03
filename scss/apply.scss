@@ -1,0 +1,17 @@
+@import"components/apply_now";
+*{
+    @include spacing(0,0);
+}
+body{
+    @include body(100vh);
+    @include responsiveSize(big) {
+      height: 100vh;
+    }
+    @include responsiveSize(medium) {   
+        height: 100vh;
+    }
+    @include responsiveSize(small) {
+        height: 100vh;
+    }
+
+}

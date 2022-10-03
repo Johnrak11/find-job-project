@@ -1,0 +1,32 @@
+@import"mixin";
+@import"verible";
+@import"input-search";
+.surse-menu{
+    @include flexProp(flex, row){
+        margin: 20px $margin-right 10px $margin-right;
+        .favorite{
+            @include flexProp(flex,row){
+                align-items:center;
+                gap: 15px;
+            } 
+            @include flexSize(1); 
+            @include responsiveSize(small) {
+                flex-wrap: wrap;
+                gap:8px;
+            }
+            button{
+                @include button; 
+                font-size:14px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                padding: 10px;
+                @include responsiveSize(small) {
+                    padding: 6px;
+                }
+            }
+            button:hover{
+                background-color: $btn_main;
+                color: white;
+            }
+        }
+    }
+}
